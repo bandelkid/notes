@@ -100,13 +100,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Sign Up</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
+        body { 
+            font: 14px sans-serif; 
+        }
+        .wrapper {
+            width: 350px;
+            padding: 20px;
+            margin-top: 124px;
+            margin-left: 500px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        <h2>Sign Up</h2>
+        <h2 style="margin-left: 90px;">Sign Up</h2>
         <p>Please fill this form to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
@@ -128,7 +138,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="submit" class="btn btn-primary" value="Submit">
                 <input type="reset" class="btn btn-default" value="Reset">
             </div>
-            <p>Already have an account? <a href="index.php">Login here</a>.</p>
+            <p>Sudah punya akun? <a href="index.php">Login sekarang</a>.</p>
         </form>
     </div>    
 </body>
